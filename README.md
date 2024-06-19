@@ -22,11 +22,33 @@ Newstextclassification
 
 # Usage
 
-实验环境推荐选择在autodl平台进行。
+实验环境推荐选择在autodl平台进行。确保用conda创建虚拟环境并在虚拟环境中安装requirements.txt文件中罗列的包、配置代理等操作。
 
 `run_all.sh` 是用于初始训练脚本，负责运行前 30 个训练轮次；`second_train.sh` 则是续训练脚本，专门用于运行第 31 到第 50 个训练轮次。
 
 建议运行bash脚本前，仔细检查确保代码中的文件路径和你的实验环境对应。
+
+```bash
+# autodl配置代理可以使用clash-for-linux这类开源项目，具体详情请自行搜索。其余可能的命令如下：
+
+# 创建一个名为 ml 的 Python 3.12 环境
+conda create -n ml python=3.12
+
+# 激活 ml 环境
+conda activate ml
+
+# 使用 pip 安装 requirements.txt 中列出的所有依赖项
+pip install -r requirements.txt
+
+# 为当前目录下的所有 .sh 文件添加可执行权限
+chmod +x *.sh
+
+# 运行 run_all.sh 脚本
+bash run_all.sh
+
+# 运行 second_train.sh 脚本
+bash second_train.sh
+```
 
 # Acknowledgments
 
