@@ -17,6 +17,7 @@ Newstextclassification
 ├── src【源代码文件夹】
 ├── tokenizer【tokenizer文件夹】
 ├── others【模型结构图文件夹】
+├── wzy.ipynb【班长的解题分享，最终得分0.9570，排名112】
 ├── *.sh【一些bash脚本】
 └── README.md【使用说明】
 ```
